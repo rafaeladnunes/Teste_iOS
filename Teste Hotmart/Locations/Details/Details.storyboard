@@ -23,18 +23,19 @@
         <scene sceneID="MPZ-Gy-Gly">
             <objects>
                 <viewController storyboardIdentifier="detailsViewController" id="U7O-nh-OOO" customClass="DetailsViewController" customModule="Teste_Hotmart" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="Sh2-ZL-Zfy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                    <view key="view" contentMode="scaleToFill" id="Sh2-ZL-Zfy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnU-wm-hFw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1204"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc4-nv-x1m">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1324"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1568"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HoJ-Pj-2iU">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                <color key="backgroundColor" red="0.81568627449999997" green="0.99215686270000003" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="xco-wq-ulM"/>
                                                 </constraints>
@@ -141,7 +142,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y59-y4-99t">
-                                                <rect key="frame" x="26" y="600" width="362" height="22"/>
+                                                <rect key="frame" x="26" y="600" width="362" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="uQ9-Da-mNY"/>
                                                 </constraints>
@@ -150,26 +151,26 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="75b-Gw-Nji">
-                                                <rect key="frame" x="26" y="642" width="20" height="20"/>
+                                                <rect key="frame" x="26" y="770" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="8Rm-RS-L54"/>
                                                     <constraint firstAttribute="width" constant="20" id="GkM-43-aZY"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZp-gI-Bhg">
-                                                <rect key="frame" x="56" y="640" width="34" height="19.5"/>
+                                                <rect key="frame" x="56" y="768" width="34" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-uZ-PJn">
-                                                <rect key="frame" x="56" y="703" width="34" height="19.5"/>
+                                                <rect key="frame" x="56" y="831" width="34" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="qxA-nQ-NuU">
-                                                <rect key="frame" x="26" y="703" width="20" height="20"/>
+                                                <rect key="frame" x="26" y="831" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="FK3-em-rSl"/>
                                                     <constraint firstAttribute="height" constant="20" id="aB1-zK-c0u"/>
@@ -182,14 +183,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="1lv-TQ-I1M">
-                                                <rect key="frame" x="26" y="747" width="20" height="20"/>
+                                                <rect key="frame" x="26" y="875" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Te7-5w-Tso"/>
                                                     <constraint firstAttribute="width" constant="20" id="vGC-fD-lWH"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REVIEWS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-XO-E6K">
-                                                <rect key="frame" x="26" y="815" width="67" height="22"/>
+                                                <rect key="frame" x="26" y="943" width="67" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="N3c-fv-Tlk"/>
                                                 </constraints>
@@ -197,11 +198,11 @@
                                                 <color key="textColor" red="0.078431372550000003" green="0.67843137249999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8G-ZS-eKY">
-                                                <rect key="frame" x="0.0" y="847" width="414" height="477"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8G-ZS-eKY">
+                                                <rect key="frame" x="0.0" y="975" width="414" height="593"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="999" constant="477" id="Jeu-is-uDC"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="400" id="Jeu-is-uDC"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ReviewsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewsCell" rowHeight="157" id="VGl-mu-s4O" customClass="ReviewsTableViewCell" customModule="Teste_Hotmart" customModuleProvider="target">
@@ -351,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOf-hq-yU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="108"/>
+            <point key="canvasLocation" x="-570" y="158"/>
         </scene>
     </scenes>
     <resources>

@@ -19,10 +19,15 @@ class CompaniesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var noteLabel: UILabel!
     
     func setupView(company: Location?) {
+        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        self.layer.shadowRadius = 6.0
+        self.layer.shadowOpacity = 0.7
+        self.layer.cornerRadius = 20
+        
         guard let location = company else {
             return
         }
-        
         locationNameLbl.text = location.name
         locationTypeLbl.text = location.type
         noteLabel.text = "\(location.review)"

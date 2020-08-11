@@ -98,16 +98,17 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EoD-Pi-SxX">
                                 <rect key="frame" x="0.0" y="104" width="414" height="709"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.94666043133802813" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mxe-G1-RpD">
                                     <size key="itemSize" width="156" height="248"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CompaniesCell" id="flL-qV-4ep" customClass="CompaniesCollectionViewCell" customModule="Teste_Hotmart" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="248"/>
+                                        <rect key="frame" x="16" y="16" width="156" height="248"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q6P-XM-Qv5">
                                             <rect key="frame" x="0.0" y="0.0" width="156" height="248"/>
@@ -115,6 +116,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i39-6y-6sm">
                                                     <rect key="frame" x="0.0" y="0.0" width="156" height="136"/>
+                                                    <color key="backgroundColor" red="0.81568627450980391" green="0.99215686274509807" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="136" id="fjl-Ja-zK6"/>
                                                         <constraint firstAttribute="width" constant="156" id="kBj-y3-eRV"/>
@@ -138,7 +140,7 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWg-2b-eNA" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="8" y="218" width="76" height="11"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="76" id="Ist-ic-HXL"/>
                                                         <constraint firstAttribute="height" constant="11" id="mYC-1k-py4"/>
@@ -199,6 +201,7 @@
                                                 <constraint firstItem="vbc-QD-Yf2" firstAttribute="leading" secondItem="PWg-2b-eNA" secondAttribute="trailing" constant="5" id="u1e-7p-E0u"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="156" height="248"/>
                                         <connections>
                                             <outlet property="locationImg" destination="i39-6y-6sm" id="ecx-P4-5W5"/>

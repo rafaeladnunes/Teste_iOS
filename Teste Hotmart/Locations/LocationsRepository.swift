@@ -25,12 +25,12 @@ class LocationsRepository {
         }
     }
     
-    func loadJson() -> Reviews? {
+    func loadJson() -> [Review]? {
         if let url = Bundle.main.url(forResource: "ReviewMock", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode(Reviews.self, from: data)
+                let jsonData = try decoder.decode(Array<Review>.self, from: data)
                 return jsonData
             } catch {
                 print("error:\(error)")

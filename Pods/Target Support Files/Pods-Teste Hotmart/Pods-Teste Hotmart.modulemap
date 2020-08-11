@@ -1,0 +1,6 @@
+module Pods_Teste_Hotmart {
+  umbrella header "Pods-Teste Hotmart-umbrella.h"
+
+  export *
+  module * { export * }
+}

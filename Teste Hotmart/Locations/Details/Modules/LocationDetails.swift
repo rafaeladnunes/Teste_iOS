@@ -16,9 +16,9 @@ struct LocationDetails: Decodable {
     let about: String
     let phone: String
     let adress: String
-//    let schedule: [String]
+    let schedule: [Schedules]
     
-    public init(id: Int, name: String, review: Double, type: String, about: String, phone: String, adress: String) {
+    public init(id: Int, name: String, review: Double, type: String, about: String, phone: String, adress: String, schedule: [Schedules]) {
         self.id = id
         self.name = name
         self.review = review
@@ -26,7 +26,7 @@ struct LocationDetails: Decodable {
         self.about = about
         self.phone = phone
         self.adress = adress
-//        self.schedule = schedule
+        self.schedule = schedule
     }
 }
 
