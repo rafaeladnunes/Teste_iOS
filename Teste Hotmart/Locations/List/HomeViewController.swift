@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate: class {
-    func showDetails(identifier: Int, viewController: UIViewController)
-}
-
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +15,6 @@ class HomeViewController: UIViewController {
     var router = LocationRouter()
     var location: Locations?
     private let locationPresenter = LocationPresenter()
-    weak var homeDelegate: HomeViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +44,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let identifier = indexPath.row + 1
-        router.showDetailsR(identifier: identifier, viewController: self)
+        router.showDetails(identifier: identifier, navigation: self.navigationController!)
     }
     
 }

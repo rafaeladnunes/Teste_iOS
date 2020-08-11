@@ -10,21 +10,10 @@ import UIKit
 
 class LocationRouter {
     
-    func showDetailsR(identifier: Int, viewController: UIViewController) {
+    func showDetails(identifier: Int, navigation: UINavigationController) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Details", bundle: nil)
         let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "detailsViewController") as! DetailsViewController
         detailsViewController.identifier = identifier
-        viewController.present(detailsViewController, animated: true, completion: nil)
+        navigation.pushViewController(detailsViewController, animated: true)
     }
-}
-
-extension LocationRouter: HomeViewControllerDelegate {
-    
-    func showDetails(identifier: Int, viewController: UIViewController) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Details", bundle: nil)
-        let detailsViewController = storyBoard.instantiateViewController(withIdentifier: "detailsViewController") as! DetailsViewController
-        detailsViewController.identifier = identifier
-        viewController.present(detailsViewController, animated: true, completion: nil)
-    }
-    
 }

@@ -21,11 +21,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var evaluationLbl: UILabel!
+    
+    private let detailsPresenter = DetailsPresenter()
     
     var location: LocationDetails?
     var reviews: [Review]?
     var identifier: Int = 0
-    private let detailsPresenter = DetailsPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +38,6 @@ class DetailsViewController: UIViewController {
         scrollView.contentSize = CGSize(width: contentWidth, height: 1425)
         tableView.delegate = self
         tableView.dataSource = self
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
     }
     
     func setupView() {
@@ -46,8 +46,19 @@ class DetailsViewController: UIViewController {
         phoneLbl.text = location?.phone
         addressLbl.text = location?.adress
         evaluationView.rating = location?.review ?? 0.0
+        evaluationLbl.text = "\(location?.review ?? 0.0)"
     }
     
+    @IBAction func shareBtn(_ sender: Any) {
+        let objectsToShare = [self.location?.name, self.location?.adress]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension DetailsViewController: DetailsDelegate {
@@ -57,12 +68,6 @@ extension DetailsViewController: DetailsDelegate {
         setupView()
         
     }
-    
-    func setupReviews(review: [Review]) {
-        self.reviews = review
-        self.tableView.reloadData()
-    }
-    
 }
 
 extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -81,15 +86,3 @@ extension DetailsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-//
-//extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        <#code#>
-//    }
-//
-//}

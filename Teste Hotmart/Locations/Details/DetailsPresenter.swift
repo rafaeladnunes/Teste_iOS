@@ -10,7 +10,6 @@ import UIKit
 
 protocol DetailsDelegate {
     func setupDetails(details: LocationDetails)
-    func setupReviews(review: [Review])
 }
 
 class DetailsPresenter {
