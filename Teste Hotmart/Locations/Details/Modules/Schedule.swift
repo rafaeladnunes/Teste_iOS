@@ -8,16 +8,6 @@
 
 import UIKit
 
-enum Days {
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
-    case saturday
-    case sunday
-}
-
 struct Schedule: Decodable {
     let open: String
     let close: String

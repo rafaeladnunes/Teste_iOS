@@ -6,7 +6,7 @@
 //  Copyright © 2020 Rafa. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct LocationDetails: Decodable {
     let id: Int
@@ -16,9 +16,9 @@ struct LocationDetails: Decodable {
     let about: String
     let phone: String
     let adress: String
-    let schedule: [Schedules]
+    let schedule: Schedules
     
-    public init(id: Int, name: String, review: Double, type: String, about: String, phone: String, adress: String, schedule: [Schedules]) {
+    public init(id: Int, name: String, review: Double, type: String, about: String, phone: String, adress: String, schedule: Schedules) {
         self.id = id
         self.name = name
         self.review = review

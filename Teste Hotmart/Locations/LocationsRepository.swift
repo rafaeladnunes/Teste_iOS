@@ -11,17 +11,53 @@ import Alamofire
 
 class LocationsRepository {
     
-    func getLocations(_ completion:@escaping (AFResult<Locations>) -> Void) {
+    func getLocations(_ completion:@escaping (Result<Locations, Error>) -> Void) {
         AF.request(APIRouter.locations)
-            .responseDecodable { (response: AFDataResponse<Locations>) in
-                completion(response.result)
+            .responseString { response in
+                switch response.result {
+                case let .success(data):
+                    completion(self.parseResultList(data))
+                case let .failure(error):
+                    completion(.failure(error))
+                }
         }
     }
     
-    func getDetails(identifier: Int, _ completion:@escaping (AFResult<LocationDetails>) -> Void) {
+    private func parseResultList(_ json : String) -> Result<Locations, Error>{
+        let jsonData = json
+            .data(using: .utf8)
+        
+        do{
+            let location = try JSONDecoder().decode(Locations.self, from: jsonData!)
+            return  Result.success(location)
+        }catch {
+            return Result.failure(error)
+        }
+    }
+    
+    func getDetails(identifier: Int, _ completion:@escaping (Result<LocationDetails, Error>) -> Void) {
         AF.request(APIRouter.details(id: identifier))
-            .responseDecodable { (response: AFDataResponse<LocationDetails>) in
-                completion(response.result)
+            .responseString { response in
+                switch response.result {
+                case let .success(data):
+                    completion(self.parseResultDetails(data))
+                case let .failure(error):
+                    completion(.failure(error))
+                }
+        }
+    }
+    
+    private func parseResultDetails(_ json : String) -> Result<LocationDetails, Error>{
+        let jsonData = json
+            .replacingOccurrences(of: "[", with: "")
+            .replacingOccurrences(of: "]", with: "")
+            .data(using: .utf8)
+        
+        do{
+            let locationDetail = try JSONDecoder().decode(LocationDetails.self, from: jsonData!)
+            return  Result.success(locationDetail)
+        }catch {
+            return Result.failure(error)
         }
     }
     
