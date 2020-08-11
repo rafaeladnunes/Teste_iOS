@@ -1,0 +1,21 @@
+[
+    {
+        "evaluation": "Fantástico!!",
+        "about": "Tortas deliciosas. Os waffles também estavam muito bons. Equipe muito atenciosa. :)",
+        "information": "Tomás Montenegro, Belo Horizonte - MG",
+        "review": 5
+    },
+    {
+        "evaluation": "Café da manhã delicioso",
+        "about": "Nós fomos para o brunch e estava realmente delicioso. Pães, ovos, café, sucos naturais. Não é muito barato mas vale a pena.",
+        "information": "Glória Ruiz, São João Del Rey - MG",
+        "review": 4
+    },
+    {
+        "evaluation": "Ótima comida",
+        "about": "Comidas frescas e de boa qualidade. Pães e quitandas saindo do forno toda hora. Cafés especiais e ambiente agradável.",
+        "information": "Shirley Jones, Mountain View - CA",
+        "review": 4.3
+    }
+]
+
