@@ -1,11 +1,3 @@
-//
-//  Schedules.swift
-//  Teste Hotmart
-//
-//  Created by Rafa on 07/08/20.
-//  Copyright © 2020 Rafa. All rights reserved.
-//
-
 import Foundation
 
 struct  Schedules: Decodable {
@@ -26,19 +18,40 @@ struct  Schedules: Decodable {
         self.friday = friday
         self.saturday = saturday
         self.sunday = sunday
+        
     }
     
-    func getSchedules() -> String {
-        var listDays: Array<DaysOfWeek> = Array()
-        listDays.append(DaysOfWeek(open: self.monday?.open, close: self.monday?.close, day: Day.monday))
-        listDays.append(DaysOfWeek(open: self.tuesday?.open, close: self.tuesday?.close, day: Day.tuesday))
-        listDays.append(DaysOfWeek(open: self.wednesday?.open, close: self.wednesday?.close, day: Day.wednesday))
-        listDays.append(DaysOfWeek(open: self.thursday?.open, close: self.thursday?.close, day: Day.thursday))
-        listDays.append(DaysOfWeek(open: self.friday?.open, close: self.friday?.close, day: Day.friday))
-        listDays.append(DaysOfWeek(open: self.saturday?.open, close: self.saturday?.close, day: Day.saturday))
-        listDays.append(DaysOfWeek(open: self.sunday?.open, close: self.sunday?.close, day: Day.sunday))
+    func formatSchedule(formatter: ScheduleDetailFormatter) -> String{
+        var formattedSchedule = ""
+        groupScheduleByWorkingTime().forEach{groupedSchedule in
+            formattedSchedule.append("\(formatter.format(groupedSchedule))\n")
+        }
         
-//        var days = Dictionary(grouping: listDays, by: { $0.open})
+        return formattedSchedule
+    }
+    
+    private func groupScheduleByWorkingTime() -> Array<GroupedSchedule>{
+        let scheduleDays = createScheduleDays()
+        return Dictionary(grouping: scheduleDays, by: { $0.open + $0.close })
+            .map{ (key, scheduleDays) in
+                let open = scheduleDays[0].open
+                let close = scheduleDays[0].close
+                let days = scheduleDays.map({ $0.day })
+                
+                return GroupedSchedule(open, close, days)
+        }
+    }
+    
+    private func createScheduleDays() -> Array<ScheduleDay>{
+        var scheduleDays: Array<ScheduleDay> = Array()
+        if let monday = self.monday { scheduleDays.append(ScheduleDay(open: monday.open, close: monday.close, day: Day.monday)) }
+        if let tuesday = self.tuesday { scheduleDays.append(ScheduleDay(open: tuesday.open, close: tuesday.close, day: Day.tuesday)) }
+        if let wednesday = self.wednesday { scheduleDays.append(ScheduleDay(open: wednesday.open, close: wednesday.close, day: Day.wednesday)) }
+        if let thursday = self.thursday { scheduleDays.append(ScheduleDay(open: thursday.open, close: thursday.close, day: Day.thursday)) }
+        if let friday = self.friday { scheduleDays.append(ScheduleDay(open: friday.open, close: friday.close, day: Day.friday)) }
+        if let saturday = self.saturday { scheduleDays.append(ScheduleDay(open: saturday.open, close: saturday.close, day: Day.saturday)) }
+        if let sunday = self.sunday { scheduleDays.append(ScheduleDay(open: sunday.open, close: sunday.close, day: Day.sunday)) }
+        
+        return scheduleDays
     }
 }
-

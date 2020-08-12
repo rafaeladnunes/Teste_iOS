@@ -45,6 +45,7 @@ class DetailsViewController: UIViewController {
         aboutLbl.text = location?.about
         phoneLbl.text = location?.phone
         addressLbl.text = location?.adress
+        scheduleLbl.text = location?.formattedSchedule()
         evaluationView.rating = location?.review ?? 0.0
         evaluationLbl.text = "\(location?.review ?? 0.0)"
     }

@@ -1,11 +1,3 @@
-//
-//  LocationDetails.swift
-//  Teste Hotmart
-//
-//  Created by Rafa on 07/08/20.
-//  Copyright © 2020 Rafa. All rights reserved.
-//
-
 import Foundation
 
 struct LocationDetails: Decodable {
@@ -27,6 +19,10 @@ struct LocationDetails: Decodable {
         self.phone = phone
         self.adress = adress
         self.schedule = schedule
+    }
+    
+    func formattedSchedule() -> String{
+        return schedule.formatSchedule(formatter: ScheduleDetailFormatter())
     }
 }
 
