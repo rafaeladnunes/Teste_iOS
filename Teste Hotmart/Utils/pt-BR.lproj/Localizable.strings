@@ -1,6 +1,0 @@
-"singleDayTemplate" = "%@: %@ as %@";
-"inSequenceDaysTemplate" = "%@ a %@: %@ as %@";
-"notInSequenceDaysTemplate" = "%@ e %@ : %@ as %@";
-"descriptionLocation" = "SOBRE";
-"reviewsLocation" = "OPINIÃO";
-"photoLocation" = "FOTOS";

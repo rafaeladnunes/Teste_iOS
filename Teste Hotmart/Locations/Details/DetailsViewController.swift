@@ -22,6 +22,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var evaluationLbl: UILabel!
+    @IBOutlet weak var photosLbl: UILabel!
+    @IBOutlet weak var reviewsLbl: UILabel!
+    @IBOutlet weak var descriptionLbl: UILabel!
     
     private let detailsPresenter = DetailsPresenter()
     
@@ -34,13 +37,15 @@ class DetailsViewController: UIViewController {
         detailsPresenter.getDetails(identifier: identifier)
         reviews = detailsPresenter.getReviews()
         detailsPresenter.attachView(self)
-        let contentWidth = scrollView.bounds.width
-        scrollView.contentSize = CGSize(width: contentWidth, height: 1425)
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     func setupView() {
+        descriptionLbl.text = NSLocalizedString("descriptionLocation", comment: "")
+        reviewsLbl.text = NSLocalizedString("reviewsLocation", comment: "")
+        photosLbl.text = NSLocalizedString("photoLocation", comment: "")
+        
         nameLbl.text = location?.name
         aboutLbl.text = location?.about
         phoneLbl.text = location?.phone
