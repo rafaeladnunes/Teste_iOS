@@ -17,7 +17,7 @@ struct ScheduleDetailFormatter {
         let open = groupedSchedule.open
         let close = groupedSchedule.close
         
-        let format = "%@: %@ as %@"
+        let format = NSLocalizedString("singleDayTemplate", comment: "")
         return String(format: format, day, open, close)
     }
     
@@ -27,7 +27,7 @@ struct ScheduleDetailFormatter {
         let open = groupedSchedule.open
         let close = groupedSchedule.close
         
-        let format = "%@ a %@: %@ as %@"
+        let format = NSLocalizedString("inSequenceDaysTemplate", comment: "")
         return String(format: format, firstDay, lastDay, open, close)
     }
     
@@ -45,12 +45,12 @@ struct ScheduleDetailFormatter {
         
         shotWeekDays = shotWeekDays.replacingOccurrences(of: ", \(lastDay), ", with: "")
         
-        let format = "%@ e %@ : %@ as %@"
+        let format = NSLocalizedString("notInSequenceDaysTemplate", comment: "")
         return String(format: format, shotWeekDays, lastDay, open, close)
     }
     
-    private func getShortWeekDay(_ day: Day) -> String {
-        let shortWeekDays = DateFormatter().shortWeekdaySymbols!
+    private func getShortWeekDay(_ day: Day) -> String{
+        let shortWeekDays = getLocalizedFormatter().shortWeekdaySymbols!
         
         if(day == .sunday){
             return shortWeekDays[0].lowercased()
@@ -58,6 +58,10 @@ struct ScheduleDetailFormatter {
             return shortWeekDays[day.rawValue].lowercased()
         }
     }
+    
+    private func getLocalizedFormatter() -> DateFormatter{
+        let formatter =  DateFormatter()
+        formatter.locale = Locale(identifier: NSLocale.preferredLanguages.first!)
+        return formatter
+    }
 }
-
-
