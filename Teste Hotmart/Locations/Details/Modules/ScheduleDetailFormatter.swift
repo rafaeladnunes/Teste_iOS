@@ -2,7 +2,7 @@ import Foundation
 
 struct ScheduleDetailFormatter {
     
-    func format(_ groupedSchedule : GroupedSchedule) ->String{
+    func format(_ groupedSchedule : WeekSchedule) ->String{
         if(groupedSchedule.isSingleDay()){
             return getSingleDaySchedule(groupedSchedule)
         }else if(groupedSchedule.isInSequence()){
@@ -12,7 +12,7 @@ struct ScheduleDetailFormatter {
         }
     }
     
-    private func getSingleDaySchedule(_ groupedSchedule: GroupedSchedule) -> String{
+    private func getSingleDaySchedule(_ groupedSchedule: WeekSchedule) -> String{
         let day = getShortWeekDay(groupedSchedule.firstDay()!)
         let open = groupedSchedule.open
         let close = groupedSchedule.close
@@ -21,7 +21,7 @@ struct ScheduleDetailFormatter {
         return String(format: format, day, open, close)
     }
     
-    private func getInSequenceSchedule(_ groupedSchedule: GroupedSchedule) -> String {
+    private func getInSequenceSchedule(_ groupedSchedule: WeekSchedule) -> String {
         let firstDay = getShortWeekDay(groupedSchedule.firstDay()!)
         let lastDay = getShortWeekDay(groupedSchedule.lastDay()!)
         let open = groupedSchedule.open
@@ -31,7 +31,7 @@ struct ScheduleDetailFormatter {
         return String(format: format, firstDay, lastDay, open, close)
     }
     
-    private func getNotInSequenceSchedule(_ groupedSchedule: GroupedSchedule) -> String{
+    private func getNotInSequenceSchedule(_ groupedSchedule: WeekSchedule) -> String{
         let lastDay = getShortWeekDay(groupedSchedule.lastDay()!)
         let open = groupedSchedule.open
         let close = groupedSchedule.close

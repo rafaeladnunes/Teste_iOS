@@ -10,7 +10,7 @@ enum Day : Int {
     case sunday
 }
 
-struct ScheduleDay {
+struct DaySchedule {
     let open: String
     let close: String
     let day: Day

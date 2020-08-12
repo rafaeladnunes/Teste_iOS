@@ -1,6 +1,6 @@
 import Foundation
 
-struct GroupedSchedule{
+struct WeekSchedule{
     
     let open: String
     let close: String
