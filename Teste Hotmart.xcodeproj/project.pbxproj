@@ -24,7 +24,10 @@
 		05CB564524E204740082A1E9 /* ReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB564424E204740082A1E9 /* ReviewsTableViewCell.swift */; };
 		05CB564A24E20DE00082A1E9 /* ReviewMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 05CB564924E20DE00082A1E9 /* ReviewMock.json */; };
 		05CB564C24E20FDB0082A1E9 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB564B24E20FDB0082A1E9 /* Review.swift */; };
-		05CB564E24E370B20082A1E9 /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB564D24E370B20082A1E9 /* DaysOfWeek.swift */; };
+		05CB565224E459AA0082A1E9 /* DaySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB564F24E459AA0082A1E9 /* DaySchedule.swift */; };
+		05CB565324E459AA0082A1E9 /* ScheduleDetailFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB565024E459AA0082A1E9 /* ScheduleDetailFormatter.swift */; };
+		05CB565424E459AA0082A1E9 /* WeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB565124E459AA0082A1E9 /* WeekSchedule.swift */; };
+		05CB565B24E45E1D0082A1E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05CB565D24E45E1D0082A1E9 /* Localizable.strings */; };
 		39225DFC56CD3DFDD558D456 /* libPods-Teste Hotmart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A39CCC5B7C4F032BE57037 /* libPods-Teste Hotmart.a */; };
 		441E497D7A356CC185E927E2 /* libPods-Teste Hotmart-Teste HotmartUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8590BBD6F699616A0F6B55E4 /* libPods-Teste Hotmart-Teste HotmartUITests.a */; };
 		D385811724DB7E3A002F9FC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385811624DB7E3A002F9FC7 /* AppDelegate.swift */; };
@@ -76,7 +79,13 @@
 		05CB564424E204740082A1E9 /* ReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		05CB564924E20DE00082A1E9 /* ReviewMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ReviewMock.json; sourceTree = "<group>"; };
 		05CB564B24E20FDB0082A1E9 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		05CB564D24E370B20082A1E9 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
+		05CB564F24E459AA0082A1E9 /* DaySchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySchedule.swift; sourceTree = "<group>"; };
+		05CB565024E459AA0082A1E9 /* ScheduleDetailFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailFormatter.swift; sourceTree = "<group>"; };
+		05CB565124E459AA0082A1E9 /* WeekSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekSchedule.swift; sourceTree = "<group>"; };
+		05CB565524E45D190082A1E9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		05CB565624E45D1A0082A1E9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		05CB565C24E45E1D0082A1E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05CB565E24E45E230082A1E9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1B03A9CBD9E1566883B924C1 /* Pods-Teste Hotmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste Hotmart.release.xcconfig"; path = "Target Support Files/Pods-Teste Hotmart/Pods-Teste Hotmart.release.xcconfig"; sourceTree = "<group>"; };
 		7EF57A0BA2C59FD6A15D8992 /* Pods-Teste Hotmart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teste Hotmart.debug.xcconfig"; path = "Target Support Files/Pods-Teste Hotmart/Pods-Teste Hotmart.debug.xcconfig"; sourceTree = "<group>"; };
 		8590BBD6F699616A0F6B55E4 /* libPods-Teste Hotmart-Teste HotmartUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Teste Hotmart-Teste HotmartUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +196,7 @@
 				05CB564624E20A3B0082A1E9 /* Mocks */,
 				05CB563924E1B8D30082A1E9 /* Data */,
 				05A6797E24DCE783008ECBE0 /* Font */,
+				05CB565D24E45E1D0082A1E9 /* Localizable.strings */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,11 +214,13 @@
 		05A6798624DDBC76008ECBE0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				05CB564F24E459AA0082A1E9 /* DaySchedule.swift */,
+				05CB565024E459AA0082A1E9 /* ScheduleDetailFormatter.swift */,
+				05CB565124E459AA0082A1E9 /* WeekSchedule.swift */,
 				05A6798724DDBD09008ECBE0 /* LocationDetails.swift */,
 				05A6798924DDBDD9008ECBE0 /* Schedules.swift */,
 				05A6798B24DDBEAC008ECBE0 /* Schedule.swift */,
 				05CB564B24E20FDB0082A1E9 /* Review.swift */,
-				05CB564D24E370B20082A1E9 /* DaysOfWeek.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -397,6 +409,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = D385810A24DB7E3A002F9FC7;
 			productRefGroup = D385811424DB7E3A002F9FC7 /* Products */;
@@ -419,6 +432,7 @@
 				D385812024DB7E3B002F9FC7 /* Assets.xcassets in Resources */,
 				05CB564A24E20DE00082A1E9 /* ReviewMock.json in Resources */,
 				D385811E24DB7E3A002F9FC7 /* Main.storyboard in Resources */,
+				05CB565B24E45E1D0082A1E9 /* Localizable.strings in Resources */,
 				05A6797624DCE633008ECBE0 /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CB565424E459AA0082A1E9 /* WeekSchedule.swift in Sources */,
 				D385811B24DB7E3A002F9FC7 /* HomeViewController.swift in Sources */,
 				05CB563B24E1B8EC0082A1E9 /* APIRouter.swift in Sources */,
 				05A6798524DCE9EA008ECBE0 /* LocationRouter.swift in Sources */,
@@ -525,10 +540,11 @@
 				05A6798824DDBD09008ECBE0 /* LocationDetails.swift in Sources */,
 				05A6798324DCE952008ECBE0 /* DetailsViewController.swift in Sources */,
 				05CB564C24E20FDB0082A1E9 /* Review.swift in Sources */,
-				05CB564E24E370B20082A1E9 /* DaysOfWeek.swift in Sources */,
 				05CB563F24E1C8AE0082A1E9 /* Locations.swift in Sources */,
 				D385811924DB7E3A002F9FC7 /* SceneDelegate.swift in Sources */,
+				05CB565224E459AA0082A1E9 /* DaySchedule.swift in Sources */,
 				05A6798A24DDBDD9008ECBE0 /* Schedules.swift in Sources */,
+				05CB565324E459AA0082A1E9 /* ScheduleDetailFormatter.swift in Sources */,
 				05CB564524E204740082A1E9 /* ReviewsTableViewCell.swift in Sources */,
 				05812FEC24DCD40700728CD5 /* Location.swift in Sources */,
 				05CB564324E1FB520082A1E9 /* DetailsPresenter.swift in Sources */,
@@ -567,10 +583,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		05CB565D24E45E1D0082A1E9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CB565C24E45E1D0082A1E9 /* en */,
+				05CB565E24E45E230082A1E9 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D385811C24DB7E3A002F9FC7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D385811D24DB7E3A002F9FC7 /* Base */,
+				05CB565524E45D190082A1E9 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -579,6 +605,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D385812224DB7E3B002F9FC7 /* Base */,
+				05CB565624E45D1A0082A1E9 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -590,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -650,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

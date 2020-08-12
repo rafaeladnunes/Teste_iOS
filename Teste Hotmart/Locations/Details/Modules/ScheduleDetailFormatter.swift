@@ -3,16 +3,16 @@ import Foundation
 struct ScheduleDetailFormatter {
     
     func format(_ groupedSchedule : WeekSchedule) ->String{
-        if(groupedSchedule.isSingleDay()){
+        if(groupedSchedule.isSingleDay()) {
             return getSingleDaySchedule(groupedSchedule)
-        }else if(groupedSchedule.isInSequence()){
+        } else if(groupedSchedule.isInSequence()) {
             return getInSequenceSchedule(groupedSchedule)
-        }else{
+        } else {
             return getNotInSequenceSchedule(groupedSchedule)
         }
     }
     
-    private func getSingleDaySchedule(_ groupedSchedule: WeekSchedule) -> String{
+    private func getSingleDaySchedule(_ groupedSchedule: WeekSchedule) -> String {
         let day = getShortWeekDay(groupedSchedule.firstDay()!)
         let open = groupedSchedule.open
         let close = groupedSchedule.close
@@ -31,7 +31,7 @@ struct ScheduleDetailFormatter {
         return String(format: format, firstDay, lastDay, open, close)
     }
     
-    private func getNotInSequenceSchedule(_ groupedSchedule: WeekSchedule) -> String{
+    private func getNotInSequenceSchedule(_ groupedSchedule: WeekSchedule) -> String {
         let lastDay = getShortWeekDay(groupedSchedule.lastDay()!)
         let open = groupedSchedule.open
         let close = groupedSchedule.close
@@ -49,13 +49,13 @@ struct ScheduleDetailFormatter {
         return String(format: format, shotWeekDays, lastDay, open, close)
     }
     
-    private func getShortWeekDay(_ day: Day) -> String{
+    private func getShortWeekDay(_ day: Day) -> String {
         let shortWeekDays = DateFormatter().shortWeekdaySymbols!
         
         if(day == .sunday){
-            return shortWeekDays[0]
+            return shortWeekDays[0].lowercased()
         }else{
-            return shortWeekDays[day.rawValue]
+            return shortWeekDays[day.rawValue].lowercased()
         }
     }
 }
