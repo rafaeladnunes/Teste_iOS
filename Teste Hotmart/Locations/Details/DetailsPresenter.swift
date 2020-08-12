@@ -32,9 +32,13 @@ class DetailsPresenter {
         }
     }
     
+    func getDaysofWeek(schedules: Schedules) {
+//        let days = DaysOfWeek(days: [schedules.friday, schedules.monday, schedules.saturday, schedules.sunday, schedules.thursday, schedules.tuesday, schedules.wednesday])
+//        let day = days.days.map { $0?.open ==  }
+    }
+    
     func getReviews() -> [Review] {
         if let review = repository.loadJson() {
-//            self.locationDelegate?.setupReviews(review: review)
             return review
         }
         return []

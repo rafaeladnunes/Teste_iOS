@@ -27,5 +27,18 @@ struct  Schedules: Decodable {
         self.saturday = saturday
         self.sunday = sunday
     }
+    
+    func getSchedules() -> String {
+        var listDays: Array<DaysOfWeek> = Array()
+        listDays.append(DaysOfWeek(open: self.monday?.open, close: self.monday?.close, day: Day.monday))
+        listDays.append(DaysOfWeek(open: self.tuesday?.open, close: self.tuesday?.close, day: Day.tuesday))
+        listDays.append(DaysOfWeek(open: self.wednesday?.open, close: self.wednesday?.close, day: Day.wednesday))
+        listDays.append(DaysOfWeek(open: self.thursday?.open, close: self.thursday?.close, day: Day.thursday))
+        listDays.append(DaysOfWeek(open: self.friday?.open, close: self.friday?.close, day: Day.friday))
+        listDays.append(DaysOfWeek(open: self.saturday?.open, close: self.saturday?.close, day: Day.saturday))
+        listDays.append(DaysOfWeek(open: self.sunday?.open, close: self.sunday?.close, day: Day.sunday))
+        
+//        var days = Dictionary(grouping: listDays, by: { $0.open})
+    }
 }
 
