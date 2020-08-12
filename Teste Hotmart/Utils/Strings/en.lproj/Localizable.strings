@@ -1,0 +1,6 @@
+"singleDayTemplate" = "%@: %@ at %@";
+"inSequenceDaysTemplate" = "%@ to %@: %@ at %@";
+"notInSequenceDaysTemplate" = "%@ and %@ : %@ at %@";
+"descriptionLocation" = "ABOUT";
+"reviewsLocation" = "REVIEW";
+"photoLocation" = "PICTURES";

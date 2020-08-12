@@ -162,6 +162,7 @@
 		0590596124DCAACC00087EBA /* List */ = {
 			isa = PBXGroup;
 			children = (
+				0590596224DCAB0A00087EBA /* Cell */,
 				05812FEA24DCD3F000728CD5 /* Modules */,
 				D385811A24DB7E3A002F9FC7 /* HomeViewController.swift */,
 				D385811C24DB7E3A002F9FC7 /* Main.storyboard */,
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				0590596324DCB7D200087EBA /* CompaniesCollectionViewCell.swift */,
-				05CB564424E204740082A1E9 /* ReviewsTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -182,6 +182,7 @@
 		05A6797424DCE614008ECBE0 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				05CB566024E477400082A1E9 /* Cell */,
 				05A6798624DDBC76008ECBE0 /* Modules */,
 				05A6797524DCE633008ECBE0 /* Details.storyboard */,
 				05A6798224DCE952008ECBE0 /* DetailsViewController.swift */,
@@ -195,20 +196,20 @@
 			children = (
 				05CB564624E20A3B0082A1E9 /* Mocks */,
 				05CB563924E1B8D30082A1E9 /* Data */,
-				05A6797E24DCE783008ECBE0 /* Font */,
-				05CB565D24E45E1D0082A1E9 /* Localizable.strings */,
+				05A6797E24DCE783008ECBE0 /* Strings */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		05A6797E24DCE783008ECBE0 /* Font */ = {
+		05A6797E24DCE783008ECBE0 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				05CB565D24E45E1D0082A1E9 /* Localizable.strings */,
 				05A6797F24DCE789008ECBE0 /* OpenSans-Light.ttf */,
 				05A6798024DCE78A008ECBE0 /* OpenSans-Regular.ttf */,
 				05A6798124DCE78A008ECBE0 /* OpenSans-SemiBold.ttf */,
 			);
-			path = Font;
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		05A6798624DDBC76008ECBE0 /* Modules */ = {
@@ -240,6 +241,14 @@
 				05CB564924E20DE00082A1E9 /* ReviewMock.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		05CB566024E477400082A1E9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05CB564424E204740082A1E9 /* ReviewsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4C9FC835DB14ACC64133A1FD /* Frameworks */ = {
@@ -292,7 +301,6 @@
 			children = (
 				05A6797D24DCE779008ECBE0 /* Utils */,
 				05812FE724DCCD8100728CD5 /* Locations */,
-				0590596224DCAB0A00087EBA /* Cell */,
 				D385811624DB7E3A002F9FC7 /* AppDelegate.swift */,
 				D385811824DB7E3A002F9FC7 /* SceneDelegate.swift */,
 				D385811F24DB7E3B002F9FC7 /* Assets.xcassets */,
